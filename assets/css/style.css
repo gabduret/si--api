@@ -7,7 +7,7 @@
 html
 {
   font-family: 'Open Sans Condensed', sans-serif;
-  background-color: #000;
+  background-color: #242426;
   color: white;
 }
 
@@ -32,16 +32,15 @@ body
 {
   display: flex;
   width: auto;
-  background-color: rgba(255, 255, 255, 0.2);
   text-align: center;
   z-index: 20;
   position: absolute;
   top: 0;
 }
+
 .logo
 {
-  width: 9%;
-  height: 9%;
+  height: 15%;
   padding-top: 10px;
   min-width: 120px;
   min-height: 60px;
@@ -127,24 +126,54 @@ body
 
 /***TIMELINE + MAP ***/
 
+.data-year p
+{
+    font-size: 30px;
+    display: inline-block;
+}
+
+.data-year
+{
+   margin-left: 80px;    
+}
+
+.data-years-item
+{
+    margin-left: -10px;
+}
+
+.delete_space{
+    padding-left: -20px;
+}
+
+.data-number p{
+    margin-top: -20px;
+    
+    font-size: 30px;
+    display: inline-block;
+}
+
+.data-number-item{
+    margin-left:90px;
+}
+
+.data-number{
+    margin: 10px;
+}
+
 .containerLine
 {
-  background-color: #222;
   width: 100%;
   height: 250px;
-  border-top: 5px solid #FD9A2A;
-  border-bottom: 5px solid #FD9A2A;
   margin-top: 120px;
 }
 
 .containerMap
 {
-  background-color: #222;
+  color: #222;
   width: 80%;
   margin: auto;
   height: 700px;
-  border-top: 5px solid #FD9A2A;
-  border-bottom: 5px solid #FD9A2A;
   margin-top: 50px;
 }
 
@@ -180,13 +209,13 @@ body
   z-index: 30;
   justify-content: center;
 }
+
 .txtInfo
 {
-
   z-index: 20;
   text-align: justify;
   width: 80%;
-  padding: 40px;
+  padding: 86px;
   margin: auto;
 }
 
@@ -249,7 +278,7 @@ body
   height: 130px;
   width: 100%;
   background-color: #000;
-  margin-top: 50px;
+  margin-top: 175px;
 }
 
 .newsletterBloc
@@ -261,6 +290,14 @@ body
   text-align: justify;
   border-collapse: collapse;
 }
+
+.validForm{
+  border-radius: 10px;
+  background-color: darkorange;
+  padding: 5px;
+  margin-left: 270px;
+}
+
 .margForm
 {
 margin-left: 10px;
@@ -268,12 +305,9 @@ margin-left: 10px;
 
 input
 {
-  background-color: transparent;
-  border: none;
   border-collapse: collapse;
   font-size: 18px;
   color: #fff;
-
 }
 
 input:focus
