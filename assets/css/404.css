@@ -1,0 +1,275 @@
+.glitch
+{
+	font-size: 130px;
+	line-height: 1;
+	font-family: 'Poppins', sans-serif;
+	font-weight: 700;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	margin: 0;
+	text-decoration: none;
+	color: rgb(250, 250, 250);
+	letter-spacing: 10px;
+}
+
+.glitch:before, .glitch:after
+{
+	display: block;
+	content: '404';
+	position: absolute;
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	opacity: .8;
+	mix-blend-mode: multiply;
+}
+
+.glitch:after
+{
+	position: absolute;
+	color: #ffce00;
+	z-index: -2;
+}
+
+.glitch:before
+{
+	position: absolute;
+	color: #b5e6e6;
+	z-index: -1;
+}
+
+.glitch:hover:before
+{
+	animation: glitch 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+	mix-blend-mode: overlay;
+}
+
+.glitch:hover:after
+{
+	animation: glitch 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+	mix-blend-mode: multiply;
+}
+
+@keyframes glitch
+{
+	0%
+	{
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+
+	20%
+	{
+		-webkit-transform: translate(-5px, 5px);
+		transform: translate(-5px, 5px);
+	}
+
+	40%
+	{
+		-webkit-transform: translate(-5px, -5px);
+		transform: translate(-5px, -5px);
+	}
+
+	60%
+	{
+		-webkit-transform: translate(5px, 5px);
+		transform: translate(5px, 5px);
+	}
+
+	80%
+	{
+		-webkit-transform: translate(5px, -5px);
+		transform: translate(5px, -5px);
+	}
+
+	to
+	{
+		-webkit-transform: translate(0);
+		transform: translate(0);
+	}
+}
+
+/****************fond*************/
+.stars
+{
+	/*position: absolute;
+	*/
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	width:100%;
+	height:100%;
+	display:block;
+}
+
+.stars
+{
+	background: transparent;
+	position: absolute;
+	background:#000 url(http://sylvaingarnot.fr/media/stars.png) repeat top center;
+	z-index:-10;
+    
+}
+
+/*************message **/
+.message
+{
+	color:#b19c44;
+	font-size: 16px;
+	font-family:monospace;
+	text-align: center;
+	padding-top: 538px;
+}
+
+.message:after
+{
+	content:"]";
+}
+
+.message:before
+{
+	content:"[";
+}
+
+.message:after, .message:before
+{
+	color: #ffce00;
+	font-size: 20px;
+	-webkit-animation-name: opacity;
+	-webkit-animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	-webkit-animation-name: opacity;
+	animation-name: opacity;
+	-webkit-animation-duration: 2s;
+	animation-duration: 2s;
+	-webkit-animation-iteration-count: infinite;
+	animation-iteration-count: infinite;
+	margin:0 50px;
+}
+
+@-webkit-keyframes opacity
+{
+	0%, 100%
+	{
+		opacity: 0;
+	}
+
+	50%
+	{
+		opacity: 1;
+	}
+}
+
+/***************commet**********/
+svg
+{
+	width: 100%;
+	height: 100%;
+}
+
+*
+{
+	box-sizing: border-box;
+}
+
+#comets line
+{
+	padding: -10px;
+	position: absolute;
+	fill: none;
+	stroke: #FFF;
+	stroke-width: 1;
+	stroke-dasharray: 150 980;
+	stroke-dashoffset: 150;
+	-webkit-animation: cometFall 10s ease-out infinite;
+	animation: cometFall 10s ease-out infinite;
+}
+
+@-webkit-keyframes cometFall
+{
+	5%, 100%
+	{
+		stroke-dashoffset: -980;
+	}
+}
+
+@keyframes cometFall
+{
+	5%, 100%
+	{
+		stroke-dashoffset: -980;
+	}
+}
+
+#comets line:nth-child(1)
+{
+	-webkit-animation-delay: 7.2s;
+	animation-delay: 7.2s;
+}
+
+#comets line:nth-child(2)
+{
+	-webkit-animation-delay: 0.3s;
+	animation-delay: 0.3s;
+}
+
+#comets line:nth-child(3)
+{
+	-webkit-animation-delay: 2.5s;
+	animation-delay: 2.5s;
+}
+
+#comets line:nth-child(4)
+{
+	-webkit-animation-delay: 9.7s;
+	animation-delay: 9.7s;
+}
+
+#comets line:nth-child(5)
+{
+	-webkit-animation-delay: 5s;
+	animation-delay: 5s;
+}
+
+#comets line:nth-child(6)
+{
+	-webkit-animation-delay: 1.1s;
+	animation-delay: 1.1s;
+}
+
+#comets line:nth-child(7)
+{
+	-webkit-animation-delay: 7.3s;
+	animation-delay: 7.3s;
+}
+
+#comets line:nth-child(8)
+{
+	-webkit-animation-delay: 8s;
+	animation-delay: 8s;
+}k
+
+/*******responsive ****/
+
+@media (max-width:780px)
+{
+    .wrapper
+    {
+        margin-right:0;
+        margin-left:0;
+    }
+    
+    message
+    {
+        height:auto;
+        position:static;
+        text-align:center;
+        padding-top:20px;
+        padding-bottom:20px;
+    }
+   
+   
