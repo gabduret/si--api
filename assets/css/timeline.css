@@ -1,0 +1,80 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.time-line
+{
+  width: 100%;
+  height: 20%;
+  margin-top: 100px;
+}
+
+.time-line-item
+{
+  background: #CAC7C7;
+  margin: auto;
+  width: 90%;
+  height: 1px;
+  transition: transform 0.5s ease;
+  will-change: tranform;
+  position: relative;
+}
+.time-line .time-line-item:hover
+{
+  // cursor: pointer;
+}
+.time-line .time-line-item .progress-line
+{
+  background: #D30000;
+  width: 4px;
+  height: 100%;
+  transform-origin: 0 50%;
+  transform: translateX(0px);
+  will-change: tranform;
+}
+.asteroid-number
+{
+	position: absolute;
+	background: #078685;
+	width: 1px;
+	height: 25px;
+	top: -25px;
+	transform-origin: bottom;
+  	animation: growAsteroid 0.3s ease;
+  	will-change: transform;
+}
+
+@keyframes growAsteroid
+{
+  0% 	{ opacity: 0; }
+  100% 	{ opacity: 1; }
+}
+
+.asteroid-mass
+{
+	position: absolute;
+	background: linear-gradient(to bottom, #DE2900 0%,#D7880B 100%);
+	width: 1px;
+	height: 3px;
+	bottom: -3px;
+	transform-origin: top;
+  	animation: growAsteroid 0.3s ease;
+  	will-change: transform;
+}
+
+
+/*******
+METEOR: WAVE
+*******/
+.meteor-wave
+{
+	position: absolute;
+	width: 20px;
+	height: 20px;
+    opacity: 0;
+	border-radius: 50%;
+	border: 2px solid #ffc400;
+	background-color: #ffff00;
+	animation: meteorWave 0.9s ease;
+}

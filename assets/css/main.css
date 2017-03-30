@@ -1,9 +1,14 @@
 html, body {
 	padding: 0; 
 	margin: 0; 
-	overflow: hidden;
 }
-
+.full-map
+{
+	width: 80%;
+	height: 80%;
+	margin: auto;
+	position: relative;
+}
 #mapL {
 	position:absolute !important;
 	top: 0;
@@ -11,10 +16,13 @@ html, body {
 	bottom: 0;
 	left: 0;
     background-color: #fff;
-    position: absolute !important;
 }
 
 #coords {
 	position: absolute; 
 	bottom: 0;
+}
+.probleme-none
+{
+	display: none;
 }
