@@ -22,8 +22,7 @@ body
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
-  width: 100%;
-  height: 100%;
+
   z-index: 20;
 
 }
@@ -40,21 +39,29 @@ body
 
 .logo
 {
-  height: 15%;
+  height: 15%; 
   padding-top: 10px;
   min-width: 120px;
   min-height: 60px;
 }
+
+.containerIntro .headerPage img{
+    height: 9%;
+}
+
+
 .intro
 {
   z-index: 20;
 }
+
 .titleIntro
 {
   text-align: center;
   padding-bottom: 20px;
   font-size: 30px;
 }
+
 .colorTitleIntro
 {
   color: #FD9A2A;
@@ -84,7 +91,7 @@ body
   text-align: center;
   height: auto;
   background-color: rgba(40, 40, 40, 0.7);
-  margin-top: 150px;
+  margin-top: 450px;
   z-index: 20;
 }
 
@@ -134,7 +141,7 @@ body
 
 .data-year
 {
-   margin-left: 80px;    
+   margin-left:100px;    
 }
 
 .data-years-item
@@ -154,7 +161,7 @@ body
 }
 
 .data-number-item{
-    margin-left:90px;
+    margin-left:110px;
 }
 
 .data-number{
@@ -184,13 +191,13 @@ body
     display: flex;
     flex-direction: row;
     height: 400px;
-    background-color: #FF
     text-align: justify;
     margin-top: 30px;
     z-index: 20;
 }
 
-.infoLine{
+.infoLine
+{
   width: 40%;
   height: 2px;
   background-color: #FD9A2A ;
@@ -200,7 +207,8 @@ body
   margin: auto;
 }
 
-.containerTxtInfo{
+.containerTxtInfo
+{
   display: flex;
   flex-direction: column;
   width: 100%;
@@ -213,11 +221,35 @@ body
 .txtInfo
 {
   z-index: 20;
+  font-size: 21px;
   text-align: justify;
   width: 80%;
   padding: 86px;
   margin: auto;
 }
+
+.asteBloc
+{
+    font-size: 21px;
+    margin-left:10px;
+}
+
+.meteBloc
+{
+    font-size: 21px;
+    padding-top: -100px;
+}
+
+.comBloc
+{
+    font-size: 21px;
+    margin-right: 150px;
+}
+
+/*.containerInfo .blocCanvas2{
+    top: -50px;
+}*/
+
 
 .blocInfo:nth-child(2)
 {
@@ -233,6 +265,7 @@ body
   position: relative;
   min-width: 330px;
   z-index: 20;
+  margin-left: 146px;
 }
 
 .blocInfo > p {
@@ -270,15 +303,13 @@ body
 }
 
 /**Footer**/
-
-
 .footer
 {
   display: flex;
-  height: 130px;
+  height: 180px;
   width: 100%;
-  background-color: #000;
-  margin-top: 175px;
+  background-color: black;
+  margin-top: 50px;
 }
 
 .newsletterBloc
@@ -290,37 +321,50 @@ body
   text-align: justify;
   border-collapse: collapse;
 }
-
-.validForm{
-  border-radius: 10px;
-  background-color: darkorange;
-  padding: 5px;
-  margin-left: 270px;
-}
-
 .margForm
 {
-margin-left: 10px;
+    margin-left: 10px;
 }
 
 input
 {
+  background-color: transparent;
+  border: none;
   border-collapse: collapse;
   font-size: 18px;
   color: #fff;
+
 }
 
 input:focus
 {
   outline: none;
 }
+
 .subPut
 {
   height: 25px;
+  background-color: #434343;
+  color: white;
+  border-radius: 5px;
+  margin-top: 3px;
+  padding: 3px;
 }
+
+.validForm{
+  background-color: darkorange;
+  color: white;
+  padding: 2px;
+  padding-left: 5px;
+  padding-right: 5px;
+  border-radius: 5px;
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
 .mailForm
 {
-  width: 190px;
+  width: 220px;
 }
 .subscribe
 {
@@ -351,8 +395,8 @@ input:focus
 .txtNews
 {
   font-size: 22px;
+  padding-left: 5px;
 }
-
   /* RESPONSIVE */
 @media only screen and (min-width: 400px) and (max-width: 900px)
 {

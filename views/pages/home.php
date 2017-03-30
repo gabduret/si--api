@@ -106,7 +106,7 @@
 
   <header>
     <div class="headerPage">
-      <h1 class="logocontainer"><a href="../../index.php"><img class="logo" src="../../assets/img/logo.png"alt="#"></a></h1>
+      <a href="../../index.php"><img class="logo" src="../../assets/img/logo.png"alt="#"></a>
     </div>
   </header>
 

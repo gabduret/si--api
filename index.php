@@ -16,7 +16,7 @@
   <div class="containerIntro">
 
     <div class="headerPage">
-      <h1 class="logocontainer"><a href="#"><img class="logo" src="assets/img/logo.png"alt="#"></a></h1>
+      <a href="#"><img class="logo" src="assets/img/logo.png"alt="#"></a>
     </div>
 
     <div class="introBlock">
