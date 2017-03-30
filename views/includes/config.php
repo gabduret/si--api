@@ -2,7 +2,7 @@
 
 // Connexion variables
 define('DB_HOST','localhost');
-define('DB_NAME','dev_partiel_t2');
+define('DB_NAME','earth_impact');
 define('DB_USER','root');
 define('DB_PASS','root'); // '' par défaut sur windows
 

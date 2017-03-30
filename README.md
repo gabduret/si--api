@@ -1,5 +1,7 @@
 Bonjour, . Vous trouverez ici un gestionnaire d'inventaire réalisé en HTML/CSS et PHP/MySQL.
 
+
+
 Fonctionnalitées :
 - 
 - 

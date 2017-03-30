@@ -1,0 +1,355 @@
+/*GENERAL STYLE*/
+*
+{
+  margin: 0px;
+  padding: 0px;
+}
+html
+{
+  font-family: 'Open Sans Condensed', sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+body
+{
+  width: 100%;
+  height: 100%;
+}
+
+.containerIntro
+{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  z-index: 20;
+
+}
+
+.headerPage
+{
+  display: flex;
+  width: auto;
+  background-color: rgba(255, 255, 255, 0.2);
+  text-align: center;
+  z-index: 20;
+  position: absolute;
+  top: 0;
+}
+.logo
+{
+  width: 9%;
+  height: 9%;
+  padding-top: 10px;
+  min-width: 120px;
+  min-height: 60px;
+}
+.intro
+{
+  z-index: 20;
+}
+.titleIntro
+{
+  text-align: center;
+  padding-bottom: 20px;
+  font-size: 30px;
+}
+.colorTitleIntro
+{
+  color: #FD9A2A;
+}
+
+.imgBackground
+{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top : 0;
+  display: flex;
+}
+
+.txtIntro
+{
+  text-align: justify;
+  padding-bottom: 20px;
+  font-size: 18px;
+}
+
+.introBlock
+{
+  width: 500px;
+  padding: 20px;
+  height: 700px;
+  text-align: center;
+  height: auto;
+  background-color: rgba(40, 40, 40, 0.7);
+  margin-top: 150px;
+  z-index: 20;
+}
+
+.buttonIntro
+{
+  text-decoration: none;
+  font-size: 18px;
+  color: #FD9A2A;
+  text-transform: uppercase;
+}
+
+/***ERROR/SUCESS MESSAGES ***/
+
+.blocMessages{
+  position: relative;
+}
+.messages
+{
+  position: absolute;
+  top : 0;
+  margin-left: 20px;
+}
+
+.messages.success
+{
+  color: #87D37C;
+
+}
+.messages.errors
+{
+  color: #EC644B;
+
+}
+.error label
+{
+  color: #EC644B;
+}
+
+
+/***TIMELINE + MAP ***/
+
+.containerLine
+{
+  background-color: #222;
+  width: 100%;
+  height: 250px;
+  border-top: 5px solid #FD9A2A;
+  border-bottom: 5px solid #FD9A2A;
+  margin-top: 120px;
+}
+
+.containerMap
+{
+  background-color: #222;
+  width: 80%;
+  margin: auto;
+  height: 700px;
+  border-top: 5px solid #FD9A2A;
+  border-bottom: 5px solid #FD9A2A;
+  margin-top: 50px;
+}
+
+/**TXT INFO **/
+
+.containerInfo
+{
+    display: flex;
+    flex-direction: row;
+    height: 400px;
+    background-color: #FF
+    text-align: justify;
+    margin-top: 30px;
+    z-index: 20;
+}
+
+.infoLine{
+  width: 40%;
+  height: 2px;
+  background-color: #FD9A2A ;
+  z-index: 30;
+  text-align: justify;
+  justify-content: center;
+  margin: auto;
+}
+
+.containerTxtInfo{
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: auto;
+  padding-top: 100px;
+  z-index: 30;
+  justify-content: center;
+}
+.txtInfo
+{
+
+  z-index: 20;
+  text-align: justify;
+  width: 80%;
+  padding: 40px;
+  margin: auto;
+}
+
+.blocInfo:nth-child(2)
+{
+  align-self: flex-end;
+}
+
+.titleBlocInfo{
+  color: #FD9A2A;
+}
+
+.blocInfo{
+  padding: 30px;
+  position: relative;
+  min-width: 330px;
+  z-index: 20;
+}
+
+.blocInfo > p {
+  text-align: justify;
+}
+
+
+.pentagon
+{
+  position: relative;
+  width: 54px;
+  border-width: 50px 18px 0;
+  border-style: solid;
+  border-color: red transparent;
+}
+
+.pentagon:before
+{
+  content: "";
+  position: absolute;
+  height: 0;
+  width: 0;
+  top: -85px;
+  left: -18px;
+  border-width: 0 45px 35px;
+  border-style: solid;
+  border-color: transparent transparent ;
+}
+
+#canvasInfo
+{
+  position: absolute;
+  top: 0;
+  left: 5;
+}
+
+/**Footer**/
+
+
+.footer
+{
+  display: flex;
+  height: 130px;
+  width: 100%;
+  background-color: #000;
+  margin-top: 50px;
+}
+
+.newsletterBloc
+{
+  flex: 2;
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 90px;
+  text-align: justify;
+  border-collapse: collapse;
+}
+.margForm
+{
+margin-left: 10px;
+}
+
+input
+{
+  background-color: transparent;
+  border: none;
+  border-collapse: collapse;
+  font-size: 18px;
+  color: #fff;
+
+}
+
+input:focus
+{
+  outline: none;
+}
+.subPut
+{
+  height: 25px;
+}
+.mailForm
+{
+  width: 190px;
+}
+.subscribe
+{
+  height: 25px;
+  width: 25px;
+  border: 0 none;
+}
+
+.socialBloc
+{
+  flex: 1;
+  margin: auto;
+}
+
+.social
+{
+  margin-bottom: 5px;
+}
+.socialLink
+{
+  margin: 9px;
+}
+.socialIcon
+{
+  height: 30px;
+  width: 30px;
+}
+.txtNews
+{
+  font-size: 22px;
+}
+
+  /* RESPONSIVE */
+@media only screen and (min-width: 400px) and (max-width: 900px)
+{
+  .containerInfo
+  {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    height: auto;
+  }
+
+  .blocInfo
+  {
+    padding-bottom: 70px;
+  }
+  canvas
+  {
+    display:none;
+  }
+  .footer
+  {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .socialBloc
+  {
+    margin-top: 10px;
+  }
+  .newsletterBloc{
+    text-align: center;
+  }
+}
