@@ -98,11 +98,9 @@
 
     <script type="text/javascript">
       var asteroids = <?= json_encode($asteroids)  ?>;
-      console.log(asteroids);
 
       // get API nasa data
       var astrs = <?= json_encode($asteroids) ?>;
-      console.log(astrs);
     </script>
 
 <!--     <section class="time-line">
