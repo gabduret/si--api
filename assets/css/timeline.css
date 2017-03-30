@@ -76,8 +76,8 @@
 	height: 25px;
 	top: -25px;
 	transform-origin: bottom;
-  	animation: growAsteroid 0.3s ease;
-  	will-change: transform;
+  animation: growAsteroid 0.3s ease;
+	will-change: transform;
 }
 
 @keyframes growAsteroid
@@ -94,10 +94,9 @@
 	height: 3px;
 	bottom: -3px;
 	transform-origin: top;
-  	animation: growAsteroid 0.3s ease;
-  	will-change: transform;
+	animation: growAsteroid 0.3s ease;
+	will-change: transform;
 }
-
 
 /*******
 METEOR: WAVE
@@ -113,8 +112,6 @@ METEOR: WAVE
 	background-color: #ffff00;
 	animation: meteorWave 0.9s ease;
 }
-
-
 
 .time-line-date
 {

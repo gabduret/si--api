@@ -1,27 +1,29 @@
 <?php
 
-  // echo "<br>";
-  // echo "<br>";
-  // echo "<br>";
-  // echo "<br>";
-  // Get content
-  $key  = '';
-  $date = date('Y-m-d');
-  // $date = '2017-05-12';
-  $url  = 'https://api.nasa.gov/planetary/apod?api_key=iT01pDuV5s8EI6zlRUTH65aam9r6O7kdeBE3tymO&date='. $date;
-  $name = 'potd';
-  $path = './cache/'.md5($name.date('Y-m-d'));
+// Get content
+
+$compteur = 0;
+$potd     = 0;
+
+function myfunction($a)
+{
+  global $potd;
+  $date     = date('Y-m-d');
+  $key      = 'iT01pDuV5s8EI6zlRUTH65aam9r6O7kdeBE3tymO';
+  $url      = 'https://api.nasa.gov/planetary/apod?api_key=' . $key . '&date='. $date;
+  $name     = 'potd';
+  $path     = './cache/'.md5($name.date('Y-m-d'));
 
   // From cache
   if(file_exists($path))
   {
-    echo "cache";
+    echo '<p class="probleme-none"><p>';
     $potd = file_get_contents($path);
   }
   // From API
   else
   {
-    echo "API";
+    echo '<p class="probleme-none"><p>';
     $potd = file_get_contents($url);
     file_put_contents($path, $potd);
   }
@@ -29,24 +31,16 @@
   // Json decode
   $potd = file_get_contents($url);
   $potd = json_decode($potd);
+}
 
+myfunction(0);
 
-  // if (!empty($potd->code))
-  // {
-  //   echo "probleme";
-  // }
-  // else
-  // {
-  //   echo "good";
-  // }
-
-  // echo "<pre>";
-  // print_r($potd);
-  // echo "</pre>";
-
-  // echo $potd->url;
-
-
+// Verification 
+if (!empty($potd->code))
+{
+  $compteur += 1;
+  potd();
+}
 ?>
 
 <!DOCTYPE html>
@@ -61,7 +55,6 @@
 
 <body>
   <div class="containerIntro">
-
     <div class="headerPage">
       <a href="#"><img class="logo" src="assets/img/logo.png"alt="#"></a>
     </div>
@@ -73,9 +66,15 @@
     </div>
     <img class="imgBackground" src="<?= $potd->url; ?>" alt="">
   </div>
-  <div class="infoPotd">
-    <p><?= $potd->explanation; ?></p>
-  </div>
+
+
+  <section class="infoPotdFull">
+    <img class="infoPotdIcon" src="assets/img/int.png">
+    <div class="infoPotd">
+      <h2>Picture of the day</h2>
+      <p><?= $potd->explanation; ?></p>
+    </div>
+  </section>
 
 
 </body>

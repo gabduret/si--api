@@ -19,7 +19,7 @@
   // From API
   else
   {
-    echo "API";
+    echo '<p class="probleme-none"><p>';
     $forecast = file_get_contents($url);
     file_put_contents($path, $forecast);
   }
