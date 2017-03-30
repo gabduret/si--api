@@ -153,6 +153,13 @@
     </section>
   </div>
 
+  <div class="containerMap">
+    <section class="full-map">
+      <div id="mapWE"></div>
+      <div id="coords"></div>
+    </section>
+  </div>
+
   <!--Line and text about space-->
   <div class="containerTxtInfo">
     <div class="infoLine"></div>
