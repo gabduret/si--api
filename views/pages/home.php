@@ -210,7 +210,7 @@
             </div>
           </div>
           <div>
-            <input class="validForm" type="submit" name="submit_add" value="ADD">
+            <input class="validForm" type="submit" name="submit_add" value="Submit">
 
           </form>
         </div>
