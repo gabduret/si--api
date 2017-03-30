@@ -19,7 +19,22 @@ var lineWidth       = document.querySelector('.time-line-item'),
     ratio           = lineContain / ratiodiff,
     ratioTot        = ratio * timeLapseRatio;
 
+for (var i = timeLapse; i <= timeLapseEnd; i += 50)
+{
+    // Create Time
+    var div             = document.createElement("div");
+    div.className       = 'time-line-date ' + i;
+    div.style.transform = 'translateX(' + linepos + 'px)';
+    div.innerHTML = i;
+    timeLine.el.container.appendChild(div);
+    
 
+    console.log(i);
+    console.log(linepos);
+
+    linepos += ratioTot * 50;
+}
+linepos = 0;
 
 function set_interval()
 {
@@ -45,11 +60,15 @@ function set_interval()
           // Edit year and number Asteroid
           timeLine.el.datayear.innerHTML  = timeLapse;
           timeLine.el.datanb.innerHTML  = asteroid_id;
-        
+          
+          //ini mass
           if(massAst == -1)
             massAst = asteroids[asteroid_id].mass
           else if(massAst < asteroids[asteroid_id].mass)
             massAst = asteroids[asteroid_id].mass
+          
+          // send to map
+          time_line_marker(asteroids[asteroid_id]);
         }
         if (nbAst != 0)
         {
@@ -73,7 +92,19 @@ function set_interval()
 clear = setInterval("set_interval()", 20);
 
 
+ var mya = L.icon({
+      iconUrl: '../../assets/img/meteorite.png',
+    });
 
+var map;
+
+// Add marker and show and filtre
+function time_line_marker (id) {
+  _astr_time_line = id;
+  console.log('lol', _astr_time_line);
+  var marker_ = L.marker([_astr_time_line.reclat, _astr_time_line.reclong], {icon: mya}).addTo(map);
+  marker_.bindPopup( '<b>' + _astr_time_line.name + '</b> <br>' + '<b>Year : </b>' + _astr_time_line.year + '<br>' + '<b>Mass : </b>' + _astr_time_line.mass + ' kg' , 50);
+}
 
 /*******************
 * * * * MAP * * * *
@@ -88,7 +119,7 @@ function init() {
 
   function start_(API, suffix) {
     var mapDiv = 'map' + suffix;
-    var map    = API.map(mapDiv, {
+    map    = API.map(mapDiv, {
       center: [51.505, -0.09],
       maxZoom: 7,
       minZoom: 2,
@@ -178,19 +209,18 @@ function init() {
       className: 'zoom-' + zoom,
     });
 
-    // Add marker and show and filtre
-    function filter_marker (zoom) {
-      for (var i = 0; i<_asteroids.length; i++) {
-          if (_asteroids[i].mass > rank[zoom]) {  
-            var marker_ = L.marker([_asteroids[i].lat, _asteroids[i].ltn], {icon: myIcon}).addTo(map);
-            marker_.bindPopup( '<b>' + _asteroids[i].name + '</b> <br>' + '<b>Year : </b>' + _asteroids[i].year + '<br>' + '<b>Mass : </b>' + _asteroids[i].mass + ' kg' , 50);
-          }
-        //fin du for
-      }
-      //fin function
-    }
-
-    filter_marker(2);
+    // // Add marker and show and filtre
+    // function filter_marker (zoom) {
+    //   for (var i = 0; i<_asteroids.length; i++) {
+    //       if (_asteroids[i].mass > rank[zoom]) {  
+    //         var marker_ = L.marker([_asteroids[i].lat, _asteroids[i].ltn], {icon: myIcon}).addTo(map);
+    //         marker_.bindPopup( '<b>' + _asteroids[i].name + '</b> <br>' + '<b>Year : </b>' + _asteroids[i].year + '<br>' + '<b>Mass : </b>' + _asteroids[i].mass + ' kg' , 50);
+    //       }
+    //     //fin du for
+    //   }
+    //   //fin function
+    // }
+    // filter_marker(2);
 
 
     //Print coordinates of the mouse
