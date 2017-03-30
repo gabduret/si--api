@@ -81,6 +81,7 @@
     }
   }
 ?>
+
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -98,36 +99,10 @@
 
     <script type="text/javascript">
       var asteroids = <?= json_encode($asteroids)  ?>;
-      console.log(asteroids);
 
       // get API nasa data
       var astrs = <?= json_encode($asteroids) ?>;
-      console.log(astrs);
     </script>
-
-<!--     <section class="time-line">
-      <div class="line-data">
-        <div class="data-year">
-          <p>Depuis </p>
-          <p class="data-year-item"></p>
-        </div>
-        <div class="data-number">
-          <p class="data-number-item"></p>
-          <p> astéroïdes sont tombés</p>
-        </div>
-      </div>
-      <div class="time-line-item">
-        <div class="progress-line"></div>
-      </div>
-    </section>
-
-    <section class="full-map">
-      <div id="mapL"></div>
-      <div id="coords"></div>
-    </section> -->
-
-
-
 
   <header>
     <div class="headerPage">
@@ -136,7 +111,7 @@
   </header>
 
 
-  <div class="blocMessages">
+  <!--<div class="blocMessages">
     <!-- ERROR/SUCCESS MESSAGES -->
     <!--<div class="messages success">
       <?php foreach($success_messages as $_message): ?>
@@ -149,7 +124,7 @@
         <p><?= "$_key : $_message" ?></p>
       <?php endforeach ?>
     </div>
-  </div> -->
+  </div>-->
 
   
   <!-- CONTAINER TIMELINE-->
