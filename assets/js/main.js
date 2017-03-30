@@ -19,7 +19,22 @@ var lineWidth       = document.querySelector('.time-line-item'),
     ratio           = lineContain / ratiodiff,
     ratioTot        = ratio * timeLapseRatio;
 
+for (var i = timeLapse; i <= timeLapseEnd; i += 50)
+{
+    // Create Time
+    var div             = document.createElement("div");
+    div.className       = 'time-line-date ' + i;
+    div.style.transform = 'translateX(' + linepos + 'px)';
+    div.innerHTML = i;
+    timeLine.el.container.appendChild(div);
+    
 
+    console.log(i);
+    console.log(linepos);
+
+    linepos += ratioTot * 50;
+}
+linepos = 0;
 
 function set_interval()
 {

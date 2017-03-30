@@ -78,3 +78,17 @@ METEOR: WAVE
 	background-color: #ffff00;
 	animation: meteorWave 0.9s ease;
 }
+
+
+
+.time-line-date
+{
+  z-index: 100;
+  position: absolute;
+  width: 1px;
+  height: 3px;
+  bottom: -3px;
+  transform-origin: top;
+  animation: growAsteroid 0.3s ease;
+  will-change: transform;
+}

@@ -81,6 +81,7 @@
     }
   }
 ?>
+
 <!DOCTYPE HTML>
 <html>
   <head>
@@ -103,30 +104,6 @@
       var astrs = <?= json_encode($asteroids) ?>;
     </script>
 
-<!--     <section class="time-line">
-      <div class="line-data">
-        <div class="data-year">
-          <p>Depuis </p>
-          <p class="data-year-item"></p>
-        </div>
-        <div class="data-number">
-          <p class="data-number-item"></p>
-          <p> astéroïdes sont tombés</p>
-        </div>
-      </div>
-      <div class="time-line-item">
-        <div class="progress-line"></div>
-      </div>
-    </section>
-
-    <section class="full-map">
-      <div id="mapL"></div>
-      <div id="coords"></div>
-    </section> -->
-
-
-
-
   <header>
     <div class="headerPage">
       <h1 class="logocontainer"><a href="#"><img class="logo" src="../../assets/img/logo.png"alt="#"></a></h1>
@@ -134,7 +111,7 @@
   </header>
 
 
-  <div class="blocMessages">
+  <!--<div class="blocMessages">
     <!-- ERROR/SUCCESS MESSAGES -->
     <!--<div class="messages success">
       <?php foreach($success_messages as $_message): ?>
@@ -147,7 +124,7 @@
         <p><?= "$_key : $_message" ?></p>
       <?php endforeach ?>
     </div>
-  </div> -->
+  </div>-->
 
   
   <!-- CONTAINER TIMELINE-->
