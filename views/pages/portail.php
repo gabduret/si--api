@@ -1,14 +1,15 @@
 <?php
 
-// Get content
+include 'views/partials/header.php';
 
+// Get content
 $compteur = 0;
 $potd     = 0;
 
 function myfunction($a)
 {
   global $potd;
-  $date     = date('Y-m-d');
+  $date     = date('Y-m-d', - time()* 3200 * 24 );
   $key      = 'iT01pDuV5s8EI6zlRUTH65aam9r6O7kdeBE3tymO';
   $url      = 'https://api.nasa.gov/planetary/apod?api_key=' . $key . '&date='. $date;
   $name     = 'potd';
@@ -43,33 +44,22 @@ if (!empty($potd->code))
 }
 ?>
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-    <title>EARTH IMPACT</title>
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
-    <link rel="apple-touch-icon" sizes="57x57" href="/apple-icon-57x57.png">
-    <link rel="stylesheet" href="../../assets/css/style.css">
-</head>
-<body>
-
   <div class="containerIntro">
     <div class="headerPage">
-      <a href="#"><img class="logo" src="../assets/img/logo.png"alt="#"></a>
+      <a href="#"><img class="logo" src="assets/img/logo.png"alt="#"></a>
     </div>
 
     <div class="introBlock">
       <h2 class="intro titleIntro">Welcome to <span class="colorTitleIntro">EarthImpact</span></h2>
       <p class="intro txtIntro">Here is a new experience showing the meteorites which have fallen on Earth these past two thousands years. You can watch where they have hit the floor, how big they were and how many they were. This way we can see how the universe is big and how small we are. Enjoy the show !</p>
-      <a href="views/pages/home.php" class="buttonIntro">Start the experience</a>
+      <a href="home" class="buttonIntro">Start the experience</a>
     </div>
     <img class="imgBackground" src="<?= $potd->url; ?>" alt="">
   </div>
 
 
   <section class="infoPotdFull">
-    <img class="infoPotdIcon" src="../assets/img/int.png">
+    <img class="infoPotdIcon" src="assets/img/int.png">
     <div class="infoPotd">
       <h2>Picture of the day</h2>
       <p><?= $potd->explanation; ?></p>
@@ -77,5 +67,5 @@ if (!empty($potd->code))
   </section>
 
 
-</body>
-</html>
+<?php
+include 'views/partials/footer.php';
