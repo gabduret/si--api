@@ -98,7 +98,7 @@
   <body>
 
     <script type="text/javascript">
-      var asteroids = <?= json_encode($asteroids)  ?>;
+      var asteroids = <?= json_encode($asteroids) ?>;
 
       // get API nasa data
       var astrs = <?= json_encode($asteroids) ?>;
@@ -150,13 +150,7 @@
       <div id="mapL"></div>
       <div id="coords"></div>
     </section>
-  </div>
-
-  <div class="containerMap">
-    <section class="full-map">
-      <div id="mapWE"></div>
-      <div id="coords"></div>
-    </section>
+    <a class="button-map" href="maps.php">Exploration libre</a>
   </div>
 
   <!--Line and text about space-->
@@ -233,30 +227,7 @@
 
   </footer>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-  <script type="text/javascript" src="src/scripts/script.js"></script>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    <script type="text/javascript" src="../../assets/js/main.js"></script>
+  <script type="text/javascript" src="src/scripts/script.js"></script>        
+  <script type="text/javascript" src="../../assets/js/main.js"></script>
   </body>
 </html>

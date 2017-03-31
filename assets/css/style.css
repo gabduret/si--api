@@ -397,6 +397,29 @@ input:focus
   font-size: 22px;
   padding-left: 5px;
 }
+.button-map 
+{
+  width: 100px;
+  height: 50px;
+  background-color: #FD9A2A;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 2px;
+  margin: 25px 0;
+  position: absolute;
+  right: 50%;
+  transform: translateX(50%);
+  cursor: pointer;
+  text-decoration: none;
+  color: #fff;
+}
+.button-map:hover
+{
+  background-color: #d48022;
+  transition-timing-function: ease;
+  transition-duration: 0.3s;
+}
   /* RESPONSIVE */
 @media only screen and (min-width: 400px) and (max-width: 900px)
 {

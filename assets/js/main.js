@@ -101,96 +101,6 @@ function time_line_marker (id) {
 }
 
 /*******************
-* * * * MAP 3D * * * *
-*****************/
-
-function initialize() {
-    var options = { 
-      zoom: 2,
-      center: [51.505, -0.09],
-      maxZoom: 7,
-      minZoom: 2,
-      dragging: true,
-      scrollWheelZoom: true
-    };
-
-    var earth = new WE.map('mapWE', options); 
-    WE.tileLayer('http://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}.png',{
-          attribution: '© OpenStreetMap contributors'
-    }).addTo(earth);
-
-
-
-
-    // propeties pf icon earth
-    // var my_icon = WE.icon({
-    //   iconUrl: '../../assets/img/meteorite.png',
-    //   className: 'zoom-' + zoom,
-    // });
-
-    // get API nasa data
-    //var asteroids = <?= json_encode($asteroids) ?>;
-    var _asteroids = [];
-
-    function astr (name, lat, ltn, mass, year)
-    {
-      this.name = name;
-      this.lat  = lat;
-      this.ltn  = ltn;
-      this.mass = mass;
-      this.year = year; 
-    }
-
-    // filtration des astéroides 
-    // En fonction du nombre de d'astéroide
-    for (let key in asteroids) {
-      if (asteroids[key].reclat && asteroids[key].reclong && asteroids[key].year && asteroids[key].mass ){
-        _asteroids.push(new astr(asteroids[key].name, asteroids[key].reclat, asteroids[key].reclong, asteroids[key].mass, asteroids[key].year));
-      }
-    }
-    
-    var zoom = 2;
-
-    setInterval(function(){ 
-      // check if zoom change and zoom event
-      if (zoom != earth._zoom && zoom <= earth._zoom) {
-        zoom = earth._zoom;              
-        myIcon.options.className = 'zoom-' + zoom;
-        filter_marker(zoom);
-      }
-      // check if zoom change and dezoom event
-      if (zoom != earth._zoom && zoom > earth._zoom) {
-        var className = myIcon.options.className;
-        var elements  = document.querySelectorAll('img.'+ 'zoom-' + zoom);
-        for (var i = 0; elements.length > i; i++) {
-          elements[i].parentNode.removeChild(elements[i]);
-        }
-        zoom = earth._zoom; 
-      }
-    }, 100);
-    
-
-    var rank = [0,0, 200000, 100000, 50000, 25000, 15000, 1000];
-
-    // Add marker and show and filtre
-    function filter_marker (zoom) {
-      for (var i = 0; i<_asteroids.length; i++) {
-          if (_asteroids[i].mass > rank[zoom]) {  
-            var marker_ = WE.marker([_asteroids[i].lat, _asteroids[i].ltn]).addTo(earth);
-            marker_.bindPopup( '<b>' + _asteroids[i].name + '</b> <br>' + '<b>Year : </b>' + _asteroids[i].year + '<br>' + '<b>Mass : </b>' + _asteroids[i].mass + ' kg' , 50);
-          }
-        //fin du for
-      }
-      //fin function
-    }
-    filter_marker(7);
-
-
-}
-
-initialize();
-
-/*******************
 * * * * MAP * * * *
 *****************/
 
@@ -200,18 +110,19 @@ function init() {
   var m = {};
 
   start_(L, 'L');
+  start_(L, 'mapWE')
 
 
   function start_(API, suffix) {
     var mapDiv = 'map' + suffix;
-    map    = API.map(mapDiv, {
+    map = API.map(mapDiv, {
       center: [51.505, -0.09],
       boxZoom: false,
       dragging: false,
       doubleClickZoom: false,
       maxZoom: 7,
       minZoom: 2,
-      dragging: true,
+      dragging: false,
       scrollWheelZoom: false,
       zoomControl: false,
     });
@@ -222,23 +133,8 @@ function init() {
       attribution: '© OpenStreetMap contributors'
     }).addTo(map);
 
-    //Add TileJSON overlay
-    var json = {
-      "profile": "mercator",
-      "name": "Grand Canyon USGS",
-      "format": "png",
-      "bounds": [-112.26379395, 35.98245136, -112.10998535, 36.13343831],
-      "minzoom": 10, "version": "1.0.0",
-      "maxzoom": 16,
-      "center": [-112.18688965, 36.057944835, 1],
-      "type": "overlay", "description": "",
-      "basename": "grandcanyon",
-      "tilejson": "2.0.0",
-      "sheme": "xyz",
-      "tiles": ["http://tileserver.maptiler.com/grandcanyon/{z}/{x}/{y}.png"]};
-    
     //If not able to display the overlay, at least move to the same location
-    map.setView([2, 46], json.center[2]);
+    map.setView([2, 46], 1);
 
     //Print coordinates of the mouse
     map.on('mousemove', function(e) {
