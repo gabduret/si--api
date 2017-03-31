@@ -17,6 +17,11 @@ body
   height: 100%;
 }
 
+.probleme-none
+{
+  display: none;
+}
+
 .containerIntro
 {
   display: flex;
@@ -29,6 +34,7 @@ body
 
 .headerPage
 {
+  margin-top: 30px;
   display: flex;
   width: auto;
   text-align: center;
@@ -41,8 +47,8 @@ body
 {
   height: 15%; 
   padding-top: 10px;
-  min-width: 120px;
-  min-height: 60px;
+  min-width: 150px;
+  min-height: 80px;
 }
 
 .containerIntro .headerPage img{
@@ -78,20 +84,18 @@ body
 
 .txtIntro
 {
-  text-align: justify;
   padding-bottom: 20px;
   font-size: 18px;
+  margin-bottom: 20px;
 }
 
 .introBlock
 {
   width: 500px;
-  padding: 20px;
-  height: 700px;
+  padding: 30px;
   text-align: center;
-  height: auto;
-  background-color: rgba(40, 40, 40, 0.7);
-  margin-top: 450px;
+  background-color: rgba(27, 27, 27, 0.4);
+  margin-top: 30vh;
   z-index: 20;
 }
 
@@ -103,9 +107,51 @@ body
   text-transform: uppercase;
 }
 
+
+/* Popup explanation */
+.infoPotdFull
+{
+  position: relative;
+  position: fixed;
+  background: red;
+  bottom: 30px;
+  right: 30px;
+  z-index: 100;
+}
+.infoPotdIcon
+{
+  width: 30px;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+.infoPotd
+{
+  width: 230px;
+  padding: 15px;
+  position: absolute;
+  background: rgba(27, 27, 27, 0.6);
+  font-size: 13px;
+  opacity: 0;
+  transform: scale(0.2) translateX(-100%) translateY(-100%);
+  transform-origin: top left;
+  transition: all 0.3s ease;
+  will-change: tranform;
+}
+.infoPotdFull:hover .infoPotd
+{
+  opacity: 1;
+  transform: scale(1) translateX(-100%) translateY(-100%);
+}
+
+
+
+
+
 /***ERROR/SUCESS MESSAGES ***/
 
-.blocMessages{
+.blocMessages
+{
   position: relative;
 }
 .messages
@@ -149,7 +195,8 @@ body
     margin-left: -10px;
 }
 
-.delete_space{
+.delete_space
+{
     padding-left: -20px;
 }
 
@@ -160,11 +207,13 @@ body
     display: inline-block;
 }
 
-.data-number-item{
+.data-number-item
+{
     margin-left:110px;
 }
 
-.data-number{
+.data-number
+{
     margin: 10px;
 }
 
@@ -228,6 +277,8 @@ body
   margin: auto;
 }
 
+/******ici changement ****/
+
 .asteBloc
 {
     font-size: 21px;
@@ -243,7 +294,8 @@ body
 .comBloc
 {
     font-size: 21px;
-    margin-right: 150px;
+    margin-right: 200px;
+    margin-top: -10px;
 }
 
 /*.containerInfo .blocCanvas2{
@@ -254,6 +306,7 @@ body
 .blocInfo:nth-child(2)
 {
   align-self: flex-end;
+  padding-bottom: 175px;
 }
 
 .titleBlocInfo{
@@ -261,14 +314,15 @@ body
 }
 
 .blocInfo{
-  padding: 30px;
+  padding: 15px;
   position: relative;
   min-width: 330px;
   z-index: 20;
-  margin-left: 146px;
+  margin-left: 190px;
 }
 
-.blocInfo > p {
+.blocInfo > p
+{
   text-align: justify;
 }
 
@@ -309,7 +363,7 @@ body
   height: 180px;
   width: 100%;
   background-color: black;
-  margin-top: 50px;
+  margin-top:116px;
 }
 
 .newsletterBloc
@@ -351,16 +405,20 @@ input:focus
   padding: 3px;
 }
 
-.validForm{
-  background-color: darkorange;
-  color: white;
-  padding: 2px;
-  padding-left: 5px;
+.validForm
+{
   padding-right: 5px;
-  border-radius: 5px;
-  margin-top: 5px;
-  margin-left: 10px;
+  margin-top: 17px;
+  margin-left: 10px;  
+  outline:none;
+  height: 32px;
+  text-align: center;
+  width: 106px;
+  border-radius:40px;
+  background: orange;
+  letter-spacing:1px;
 }
+
 
 .mailForm
 {
@@ -397,6 +455,7 @@ input:focus
   font-size: 22px;
   padding-left: 5px;
 }
+<<<<<<< HEAD
 .button-map 
 {
   width: 100px;
@@ -420,6 +479,7 @@ input:focus
   transition-timing-function: ease;
   transition-duration: 0.3s;
 }
+
   /* RESPONSIVE */
 @media only screen and (min-width: 400px) and (max-width: 900px)
 {
@@ -450,7 +510,8 @@ input:focus
   {
     margin-top: 10px;
   }
-  .newsletterBloc{
+  .newsletterBloc
+  {
     text-align: center;
   }
 }

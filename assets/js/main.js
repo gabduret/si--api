@@ -84,7 +84,7 @@ function set_interval()
     }
     return;
 }
-clear = setInterval("set_interval()", 20);
+clear = setInterval("set_interval()", 30);
 
 // properties of icon map 
  var mya = L.icon({
