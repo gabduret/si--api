@@ -169,23 +169,22 @@
 
   <!--Three block of description -->
   <div class="containerInfo">
-    <div id="blocCanvas1" class="asteBloc blocInfo">
+    <div class="blocInfo">
       <h2 class="titleBlocInfo">Astéroïdes</h2>
       <p>Asteroids are patatoid-shaped bodies gravitating mainly in the main asteroid belt between Mars and Jupiter and are composed mostly of carbon, silicone and metal. More than one million of them are more than one kilometer long and are already identified and monitored. They are considered "potentially dangerous" when they are over 130 meters.</p>
-      <canvas id="canvasInfo" width=450 height=360></canvas>
+ 
     </div>
-    <div class="blocCanvas2 meteBloc blocInfo">
+    <div class="blocInfo">
       <h2 class="titleBlocInfo orangeTitleMete">Météorites</h2>
       <p>Meteors are debris drifting into space that may come from comets, asteroids or fragmented planets. The debris becomes a meteor when it enters the earth's atmosphere: they are also called shooting stars because of the flash of lights they cause. If part of the meteor survives upon its arrival in the atmosphere and lands on Earth, this part is called meteorite and can weigh from a few grams to nearly 100 kilos.
       </p>
     </div>
-    <div class="blocCanvas3 comBloc blocInfo">
+    <div class="blocInfo">
       <h2 class="titleBlocInfo">Comètes</h2>
       <p>Comets are bodies composed mostly of ice and are easily recognizable by the "hair of ice" that they release behind them as they approach the Sun. Those that return to the solar system every less than 200 years are called periodic. They travel the solar system periodically and are somewhat smaller than the asteroids.</p>
     </div>
-    <!--<img class="imgBackground" src="http://apod.nasa.gov/apod/image/1703/KingOfWings_Pinkston_7360.jpg" alt="">-->
   </div>
-
+      
   <!--Footer-->
 
   <footer>
@@ -235,28 +234,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
   <script type="text/javascript" src="src/scripts/script.js"></script>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
+ 
     <script type="text/javascript" src="../../assets/js/main.js"></script>
   </body>
 </html>
