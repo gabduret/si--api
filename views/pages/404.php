@@ -6,7 +6,7 @@
 		<link rel="stylesheet" href="../../assets/css/404.css">
 	</head>
 	<body>
-		<a href="#" class="glitch">404</a>
+		<a href="/" class="glitch">404</a>
 		<div class="stars"></div>
 		<div class="message">
 			Oops ! you are lost on the web space, it's okay, keep your calm and just go back to the home

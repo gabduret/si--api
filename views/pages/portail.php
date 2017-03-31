@@ -14,7 +14,6 @@ function myfunction($a)
   $url      = 'https://api.nasa.gov/planetary/apod?api_key=' . $key . '&date='. $date;
   $name     = 'potd';
   $path     = './cache/'.md5($name.date('Y-m-d'));
-echo $url;
   // From cache
   if(file_exists($path))
   {
