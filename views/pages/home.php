@@ -168,14 +168,12 @@
         <h2 class="titleBlocInfo">Comètes</h2>
         <p>Comets are bodies composed mostly of ice and are easily recognizable by the "hair of ice" that they release behind them as they approach the Sun. Those that return to the solar system every less than 200 years are called periodic. They travel the solar system periodically and are somewhat smaller than the asteroids.</p>
       </div>
-      <!--<img class="imgBackground" src="http://apod.nasa.gov/apod/image/1703/KingOfWings_Pinkston_7360.jpg" alt="">-->
     </div>
 
     <!--Footer-->
 
     <footer>
       <div class="footer">
-
         <!--Form newsletter block-->
         <div class="newsletterBloc">
           <form method="post" lass="newsletter" >
@@ -183,7 +181,6 @@
               Subscribe to our newsletter !
             </div>
             <div class="margForm">
-
               <div class="<?= array_key_exists('first-name', $error_messages) ? 'error' : '' ?>">
                 <input class="subPut" type="text" name="first-name" value="<?= $_POST['first-name'] ?>" placeholder="First Name" id="first-name"/>
               </div>
@@ -199,7 +196,6 @@
             </form>
           </div>
 
-
         </div>
         <!--SocialNetwork bloc-->
         <div class="socialBloc">
@@ -212,12 +208,11 @@
             Copyright (c) 2017 Copyright Heticien All Rights Reserved.
           </div>
         </div>
-
       </div>
 
-    </footer>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
-    <script type="text/javascript" src="assets/js/main.js"></script>
+     </footer>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+  <script type="text/javascript" src="assets/js/main.js"></script>
 
 <?php
 include 'views/partials/footer.php';

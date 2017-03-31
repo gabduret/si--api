@@ -84,7 +84,7 @@ function set_interval()
     }
     return;
 }
-clear = setInterval("set_interval()", 30);
+clear = setInterval("set_interval()", 50);
 
 // properties of icon map 
  var mya = L.icon({
@@ -119,14 +119,6 @@ function initialize() {
           attribution: '© OpenStreetMap contributors'
     }).addTo(earth);
 
-
-
-
-    // propeties pf icon earth
-    // var my_icon = WE.icon({
-    //   iconUrl: '../../assets/img/meteorite.png',
-    //   className: 'zoom-' + zoom,
-    // });
 
     // get API nasa data
     //var asteroids = <?= json_encode($asteroids) ?>;
@@ -193,8 +185,6 @@ initialize();
 /*******************
 * * * * MAP * * * *
 *****************/
-
-// var asteroids = [];
 
 function init() {
   var m = {};
