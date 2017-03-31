@@ -195,14 +195,14 @@
               <input class="validForm" type="submit" name="submit_add" value="Submit">
             </form>
           </div>
-
         </div>
+
         <!--SocialNetwork bloc-->
         <div class="socialBloc">
           <div class="social">
-            <a class="socialLink" href="#"><img class="socialIcon" src="assets/img/fb.png" alt="facebook"></a>
-            <a class="socialLink" href="#"><img class="socialIcon" src="assets/img/twitter.png" alt="twitter"></a>
-            <a class="socialLink" href="#"><img class="socialIcon" src="assets/img/g+.png" alt="GooglePlus"></a>
+            <a class="socialLink" href="https://www.facebook.com/sharer/sharer.php?u=http://www.kaanroussel.com/home&amp;src=sdkpreparse"><img class="socialIcon" src="assets/img/fb.png" alt="facebook"></a>
+            <a class="socialLink" href="https://twitter.com/intent/tweet?text=New web site about asteroids ! It's amazing !"><img class="socialIcon" src="assets/img/twitter.png" alt="twitter"></a>
+            <a class="socialLink" href="https://plus.google.com/share?url=http://www.kaanroussel.com/home"><img class="socialIcon" src="assets/img/g+.png" alt="GooglePlus"></a>
           </div>
           <div class="txtFooter">
             Copyright (c) 2017 Copyright Heticien All Rights Reserved.
